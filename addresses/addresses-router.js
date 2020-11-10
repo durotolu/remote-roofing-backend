@@ -8,7 +8,7 @@ router.post('/', (req, res) => {
     let result = [];
     
     for (let i = 0; data.length > i; i++) {
-      if (data[i].includes(address) && result.length < 5) {
+      if (data[i].toLowerCase().includes(address.toLowerCase()) && result.length < 5) {
         result.push(data[i]);
       };
       if (result.length >= 4) {
